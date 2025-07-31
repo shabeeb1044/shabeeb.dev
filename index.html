@@ -1,0 +1,166 @@
+<h1 class="theshabeeb-title" aria-label="We all go a little crazy sometimes.">
+  <div class="theshabeeb-text" aria-hidden="true">
+    A curious click<br>
+    <span class="theshabeeb-hidden">A</span>Digital Misstep<br>
+    <span class="theshabeeb-hidden"></span>Beware the bait
+  </div>
+</h1>
+
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap");
+:root {
+  --theshabeeb-font: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", sans-serif;
+  --theshabeeb-color-text: #f4f4f4;
+  --theshabeeb-color-bg: black;
+  color: var(--theshabeeb-color-text);
+  background-color: var(--theshabeeb-color-bg);
+}
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  font-feature-settings: "kern";
+  -webkit-font-kerning: normal;
+          font-kerning: normal;
+  -moz-osx-font-smoothing: grayscale !important;
+  -webkit-font-smoothing: antialiased !important;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--theshabeeb-font);
+  font-size: clamp(110%, calc(100% + 0.5vw), 200%);
+  line-height: 1.5;
+}
+
+body {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  inline-size: 100vw;
+  block-size: 100vh;
+  padding: 1vmin;
+}
+body:before, body:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+
+}
+body:before {
+  /* background: linear-gradient(217deg, rgba(255, 0, 255, 0.15), rgba(255, 0, 255, 0) 70.71%), linear-gradient(127deg, rgba(0, 255, 255, 0.15), rgba(0, 255, 255, 0) 70.71%), linear-gradient(336deg, rgba(255, 255, 0, 0.15), rgba(255, 255, 0, 0) 70.71%); */
+ 
+
+  background-size: 180% 180%;
+  -webkit-animation: theshabeeb-gradient 8s ease infinite;
+          animation: theshabeeb-gradient 8s ease infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  body:before {
+    background-size: 100% 100%;
+    -webkit-animation: none;
+            animation: none;
+  }
+}
+body:after {
+  opacity: 0.5;
+  background: url("./boomrand.jpeg") center center;
+  /* background: black; */
+  background-size: cover;
+  mix-blend-mode: hard-light;
+}
+
+.theshabeeb-title {
+  margin: 0;
+  font-family: "Rubik Glitch", var(--theshabeeb-font);
+  font-size: clamp(1rem + 3vw, 7vw, 2rem + 6vw);
+  font-weight: 400;
+  line-height: 0.8;
+  word-spacing: 0.15em;
+  text-transform: uppercase;
+  text-shadow: 0.02em 0.04em 0 cyan, -0.02em -0.04em 0 red;
+  white-space: nowrap;
+  -webkit-animation: theshabeeb-flicker 0.1s infinite;
+          animation: theshabeeb-flicker 0.1s infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .theshabeeb-title {
+    text-shadow: 0.01em 0.02em 0 cyan, -0.01em -0.02em 0 magenta;
+    -webkit-animation: none;
+            animation: none;
+  }
+}
+.theshabeeb-title .theshabeeb-hidden {
+  opacity: 0;
+}
+
+@-webkit-keyframes theshabeeb-flicker {
+  0% {
+    transform: translatex(-2%);
+    opacity: 1;
+  }
+  10% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    transform: translatex(0);
+    opacity: 1;
+  }
+}
+
+@keyframes theshabeeb-flicker {
+  0% {
+    transform: translatex(-2%);
+    opacity: 1;
+  }
+  10% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    transform: translatex(0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes theshabeeb-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes theshabeeb-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+</style>
